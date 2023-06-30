@@ -1,0 +1,139 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  width:100%;
+  height:auto;
+}
+.data{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header{
+  color:white;
+  background-color: blue;
+  width:100%;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 10px;
+}
+form{
+   display: flex;
+   flex-direction: column;
+   gap:10px;
+}
+input{
+  width:400px;
+  height:40px;
+  border-radius: 10px;
+  text-indent: 10px;
+  border: 3px solid blue;
+  outline: none;
+}
+input:focus{
+  border:3px solid green;
+  outline: none;
+}
+.addbtn{
+  padding: 10px 20px;
+  background-color: green;
+  cursor: pointer;
+  color:white;
+  border:none;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.addbtn:hover{
+  background-color: rgba(0, 0, 255, 0.774);
+  transform: scale(0.9);
+}
+table,th,td{
+  border:2px solid blue;
+  border-collapse: collapse;
+  margin-top: 50px;
+  text-align: center;
+  width:700px;
+  height:40px;
+}
+.editbtn{
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+  border: none;
+}
+.deletebtn{
+  background-color: red;
+  color:white;
+  cursor: pointer;
+  margin-right:10px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border:none;
+}
+.closebtn{
+  background-color: red;
+  padding: 10px 20px;
+  color:white;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+th{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+td{
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.modal{
+  position:absolute;
+  top:60%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:99;
+}
+.box{
+  background-color:whitesmoke;
+  width:500px;
+  height:300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:5px;
+  padding: 10px;
+  border:5px solid blue;
+  border-radius: 10px;
+}
+.updateval{
+  color:blue;
+  margin-bottom: 5px;
+}
+.taskslength{
+  color:white;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: blue;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.error{
+  color:white;
+  text-align: center;
+  background-color: red;
+  font-weight: bold;
+  height:30px;
+  margin-bottom: 10px;
+  padding: 5px;
+}

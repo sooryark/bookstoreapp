@@ -1,0 +1,14 @@
+{
+  "dataitems": [
+    {
+      "bookname": "tmil",
+      "price": "20",
+      "id": 1
+    },
+    {
+      "bookname": "English",
+      "price": "250",
+      "id": 2
+    }
+  ]
+}
