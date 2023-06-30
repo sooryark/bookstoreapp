@@ -96,17 +96,9 @@ export const bookSlice = createSlice({
     error:""
     },
     reducers:{
-        addTask:(state,action)=>{
-           const id = Math.random() * 100;
-           let task = {...action.payload,id}
-           console.log(action.payload)
-        },
         removeTask:(state,action)=>{
             state.taskList = state.taskList.filter((tasks)=>tasks.id !== action.payload.id)
             console.log(state.taskList)
-        },
-        updatedTask:(state,action)=>{
-             state.taskList = state.taskList.map((tasks)=>tasks.id === action.payload.id ? action.payload : tasks)
         },
         selectedTaskFn:(state,action)=>{
           state.selectedTask = action.payload

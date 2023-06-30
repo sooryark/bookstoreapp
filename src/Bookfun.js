@@ -13,7 +13,7 @@ const BookFun = ()=>{
     
 
    const HandleSubmit = ()=>{
-    if(bookname.length ==0 && price.length == 0){
+    if(bookname.length === 0 && price.length === 0){
       return alert("Please Enter Data")
     }else{
       dispatch(postTaskToServer({bookname,price}))

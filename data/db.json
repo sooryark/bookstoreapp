@@ -1,14 +1,24 @@
 {
   "dataitems": [
     {
-      "bookname": "tmil",
-      "price": "20",
-      "id": 1
-    },
-    {
       "bookname": "English",
       "price": "250",
       "id": 2
+    },
+    {
+      "bookname": "Tamil",
+      "price": "350",
+      "id": 3
+    },
+    {
+      "bookname": "Chemistry",
+      "price": "400",
+      "id": 4
+    },
+    {
+      "bookname": "Maths",
+      "price": "400",
+      "id": 5
     }
   ]
 }
