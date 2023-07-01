@@ -9,12 +9,12 @@ const Header = ()=>{
 
     return(
         <>
-        <h1 className="header">Book Store App</h1>
+        <h1 className="heading-4 text-center bg-primary text-white p-2">Book Store App</h1>
         {
-            error &&  <p className="error">{error}</p>
+            error &&  <p className="text-center text-danger">{error}</p>
         }
        
-        <p className="taskslength">No of Books  {`${taskList.length}`}</p>
+        <p className="h6 text-center text-warning  bg-light p-3">No of - Books added <span className="text-success"> {`${taskList.length}`}</span></p>
        
         </>
     )

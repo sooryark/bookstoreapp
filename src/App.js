@@ -4,14 +4,15 @@ import './App.css';
 import BookFun from './Bookfun';
 import Header from './Header';
 import TableData from './TableData';
-import AppModal from "./Updated" 
+import AppModal from './Updated';
+
 
 
 
 function App() {
   
-  const [Modal,setModal] = useState()
-
+ 
+   const [Modal,setModal] = useState()
  
 
   
@@ -21,7 +22,7 @@ function App() {
     <Header/>
     <div className='data'>
     <BookFun />
-    <TableData Modal={Modal} setModal={setModal} />
+    <TableData  Modal={Modal} setModal={setModal}/>
     <AppModal Modal={Modal} setModal={setModal}/>
     </div>
     </>

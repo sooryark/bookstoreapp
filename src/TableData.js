@@ -1,8 +1,11 @@
 import { useDispatch,useSelector} from "react-redux"
 import { deleteTaskfromServer, getTaskFromServers,removeTask,selectedTaskFn } from "./features/bookslice"
-import { useEffect } from "react"
+import { useEffect} from "react"
+
 
 const TableData = ({Modal,setModal})=>{
+
+   
 
     const {taskList} = useSelector((state)=>state.taskArr)
      console.log(taskList)
@@ -12,9 +15,15 @@ const TableData = ({Modal,setModal})=>{
         dispatch(getTaskFromServers())
     },[dispatch])
 
+    
+
+    
+
     const EditTask = (newDataVal)=>{
-        setModal(true)
         dispatch(selectedTaskFn(newDataVal))
+        console.log("hai")
+        setModal(true)
+       
     }
 
     const DeleteEl = (newDataVal)=>{
@@ -26,9 +35,14 @@ const TableData = ({Modal,setModal})=>{
 
     return(
         <>
+        
+            
+   
         {
             taskList ?
-           ( <table>
+           ( 
+        <div className=" d-flex flex-column align-items-center container">
+           <table className="table table-responsive table-hover table-bordered border-dark text-center">
             <thead>
                 <tr>
                     <th>No</th>
@@ -46,8 +60,10 @@ const TableData = ({Modal,setModal})=>{
                     <td>{newDataVal.bookname}</td>
                     <td>Rs- ₹ {newDataVal.price} only</td>
                     <td>
-                        <button className="editbtn" onClick={()=>EditTask(newDataVal)}>Edit</button>
-                        <button className="deletebtn" onClick={()=>DeleteEl(newDataVal)}>Delete</button>
+                        <button className="btn btn-primary btn-sm mx-2" onClick={()=>EditTask(newDataVal)}>Edit</button>
+                        <button className="btn btn-danger btn-sm" onClick={()=>DeleteEl(newDataVal)}>Delete</button>
+                        
+                  
                     </td>
                         
                    </tr>
@@ -58,7 +74,8 @@ const TableData = ({Modal,setModal})=>{
                    
         </tbody>
            
-        </table>): 
+        </table>
+        </div>): 
         <h1 className="Error">Your BookList is Empty</h1>
         }
         
